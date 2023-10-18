@@ -1,0 +1,342 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1B1414;
+}
+h1
+{
+    font-family: 'Raleway', sans-serif;
+    color: whitesmoke;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+section *::selection
+{
+    background-color: whitesmoke;
+    color: black;
+}
+.blue *::selection
+{
+    background-color: coral;
+    color: cornsilk;
+}
+.red *::selection
+{
+    background-color: black;
+    color: mintcream;
+}
+.gradient *::selection
+{
+    color: purple;
+}
+p
+{
+    font-family: "Raleway", sans-serif;
+    color: wheat;
+}
+.gradient p
+{
+    font-family: 'Raleway', sans-serif;
+    color: wheat;
+}
+.blue p
+{
+    color: seashell;
+}
+.red p
+{
+    color: bisque;
+}
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 159px;
+}
+
+.wave .shape-fill {
+    fill: #1B1414;
+}
+.wave2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 156px;
+}
+
+.wave2 .shape-fill {
+    fill: #1B1414;
+}
+
+.wave3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave3 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 156px;
+}
+
+.wave3 .shape-fill {
+    fill: #0000FF;
+}
+
+.wave4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave4 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 156px;
+}
+
+.wave4 .shape-fill {
+    fill: #1B1414;
+}
+
+.tilt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.tilt svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+    transform: rotateY(180deg);
+}
+
+.tilt .shape-fill {
+    fill: #FF0000;
+}
+
+.tilt2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.tilt2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+    transform: rotateY(180deg);
+}
+
+.tilt2 .shape-fill {
+    fill: #1B1414;
+}
+
+.gradient
+{
+    background: linear-gradient(45deg,#8460ed, #ff1252);
+}
+.blue
+{
+    background: blue;
+}
+.red
+{
+    background: red;
+}
+.menu
+{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    right: 50px;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li
+{
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transform-origin: 100px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(80px);
+}
+
+.menu li a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: rotate(calc(360deg / -5 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    visibility: hidden;
+    transition: 1s;
+}
+.menu.active li a
+{
+    background: rgba(255, 255, 255);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+    color: black;
+    visibility: visible;
+    transition: 0.5s;
+}
+.menu li a:hover
+{
+    color: purple;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.50);
+}
+.menu.active li
+{
+    transform: rotate(calc(360deg / 5 * var(--i)));
+}
+.toggle
+{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.50);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0);
+    font-size: 2em;
+    transition: transform 1.25s;
+    transition: 0.5s;
+}
+
+.toggle:hover
+{
+    color: rgba(0, 0, 0, 1);
+    background: rgba(255, 255, 255);
+    transition: 0.5s;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.toggle:hover .menu li a
+{
+    visibility: visible;
+}
+
+.menu.active .toggle
+{
+    color: rgba(0, 0, 0, 1);
+    transform: rotate(315deg);
+    background: rgba(255, 255, 255);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+.menu.active .toggle:hover
+{
+    color: brown;
+    transition: 0.5s;
+}
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    min-width: 100%;
+    padding: 200px 20vw;
+}
+a
+{
+    font-family: 'Raleway', sans-serif;
+    color: sandybrown;
+    text-shadow: rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    transition: 0.5s;
+}
+a:hover
+{
+    text-shadow: rgba(0, 0, 0, 0.50);
+    color: seashell;
+    transition: 0.5s;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@100&display=swap');
+a.button
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    margin-bottom: 5px;
+    background: azure;
+    color: #1B1414;
+    padding: 25px;
+    border-radius: 25px;
+    min-width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    transition: 0.5s;
+}
+a.button:hover
+{
+    color: #4d00db;
+    box-shadow: rgba(0, 0, 0, 0.50);
+    transition: 0.5s;
+}

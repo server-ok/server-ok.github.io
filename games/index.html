@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>server-ok - Игры</title>
+</head>
+<body>
+<section class="blue">
+    <h1>Annoying dog: Run!</h1>
+    <p>Это игра, в которой вы играете за собаку, бегущую по дороге и собирающую косточки.</p>
+    <p>Целью игры является собрать как можно больше косточек.</p>
+    <a href="https://server-ok.github.io/AnnoyingDogRun" class="button">
+        <ion-icon name="game-controller"></ion-icon>&nbsp;Играть
+    </a>
+</section>
+<section>
+    <div class="wave3">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    <h1>Теннис 2D</h1>
+    <p>Эта игра - переделанный пинг-понг с мультиплеером.</p>
+    <p>Содержит очень много багов.</p>
+    <a href="https://server-ok.github.io/Tennis2d" class="button">
+        <ion-icon name="game-controller"></ion-icon>&nbsp;Играть
+    </a>
+</section>
+<section class="gradient">
+    <div class="wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    <div class="wave2">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    <h1>social credit тест</h1>
+    <p>Ничего не скажешь, просто во:</p>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IL8kDNaMtZk?controls=0" title="Видеопроигрыватель" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <a href="https://server-ok.github.io/social_credits_test/" class="button">
+        <ion-icon name="game-controller"></ion-icon>&nbsp;Играть
+    </a>
+</section>
+<section>
+    <h1>undertale: math edition</h1>
+    <p>Кривая игра к уроку алгебры.</p>
+    <p>Выглядит очень плохо</p>
+    <a href="https://server-ok.github.io/UnderMath/" class="button">
+        <ion-icon name="game-controller"></ion-icon>&nbsp;Играть
+    </a>
+</section>
+    <div class="menu">
+        <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
+        <li style="--i:0;">
+            <a href="https://server-ok.github.io"><ion-icon name="home-outline"></ion-icon></a>
+        </li>
+        <li style="--i:1;">
+            <a href="https://server-ok.github.io/index.html#contacts"><ion-icon name="chatbubbles-outline"></ion-icon></a>
+        </li>
+        <li style="--i:2;">
+            <a href="https://github.com/server-ok"><ion-icon name="logo-github"></ion-icon></a>
+        </li>
+        <li style="--i:3;">
+            <a href="https://youtube.com/c/serverok"><ion-icon name="logo-youtube"></ion-icon></a>
+        </li>
+        <li style="--i:4;">
+            <a href="https://server-ok.github.io/games"><ion-icon name="game-controller-outline"></ion-icon></a>
+        </li>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let toggle = document.querySelector('.toggle');
+        let menu = document.querySelector('.menu');
+        toggle.onclick = function(){
+            menu.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
